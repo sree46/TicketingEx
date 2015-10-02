@@ -1,0 +1,10 @@
+<% tickets.each do |ticket| %>
+  <div class="well" id="story-<%= ticket.id %>">
+    <%= ticket.title %> - <%= ticket.points %>
+    -
+    <%= link_to 'Edit', edit_ticket_path(ticket) %>
+    -
+    <%= link_to 'Destroy', ticket_path(ticket), method: 'delete', confirm: 'Are you sure?' %>
+  </div>
+<% end %>
+
